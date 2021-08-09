@@ -1,37 +1,44 @@
-# Fable Minimal App
+# Fable.Formatting.Markdown
 
-This is a small Fable app project so you can easily get started and add your own code progressively. For more comprehensive templates [check this page](https://fable.io/docs/2-steps/your-first-fable-project.html).
+A port of `FSharp.Formatting.Markdown` for Fable. This will allow you to use format markdown into HTML inside your Fable application
 
-## Requirements
+Example code:
 
-* [dotnet SDK](https://www.microsoft.com/net/download/core) 5.0 or higher
-* [node.js](https://nodejs.org)
-* An F# editor like Visual Studio, Visual Studio Code with [Ionide](http://ionide.io/) or [JetBrains Rider](https://www.jetbrains.com/rider/)
+```
+module App
 
-## Building and running the app
+let markdownSrc = """
+##Markdown Example
 
-* Install dependencies: `npm install`
-* Start the compiler in watch mode and a development server: `npm start`
-* After the first compilation is finished, in your browser open: http://localhost:8080/
+This is *italic*, and this is **bold**, and this is a `symbol`.
 
-Any modification you do to the F# code will be reflected in the web page after saving.
+**Unordered List**
 
-> Note: check the "scripts" section in `package.json` to see the commands triggered by the steps above.
+- Unordered item
+- Next item
+- Last item
 
-## Project structure
+**Numbered List**
 
-### npm
+1. First step
+1. Second step
+1. Third step
 
-JS dependencies are declared in `package.json`, while `package-lock.json` is a lock file automatically generated.
+**Code**
 
-### Webpack
+    let fib n =
+        if n <= 1 then
+            1
+        else
+            n * (fib (n-1))
 
-[Webpack](https://webpack.js.org) is a JS bundler with extensions, like a static dev server that enables hot reloading on code changes. Configuration for Webpack is defined in the `webpack.config.js` file. Note this sample only includes basic Webpack configuration for development mode, if you want to see a more comprehensive configuration check the [Fable webpack-config-template](https://github.com/fable-compiler/webpack-config-template/blob/master/webpack.config.js).
+"""
 
-### F#
+let markdown md =
+    let doc = FSharp.Formatting.Markdown.Markdown.Parse(md)
+    FSharp.Formatting.Markdown.Markdown.ToHtml(doc)
 
-The sample only contains two F# files: the project (.fsproj) and a source file (.fs) in the `src` folder.
+let appE = Browser.Dom.window.document.querySelector("#app")
 
-### Web assets
-
-The `index.html` file and other assets like an icon can be found in the `public` folder.
+appE.innerHTML <- markdown markdownSrc
+```
