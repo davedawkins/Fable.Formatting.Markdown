@@ -3,3 +3,4 @@ package-lock.json
 src/**/obj
 src/**/bin
 src/**/*.fs.js
+public/bundle.js
