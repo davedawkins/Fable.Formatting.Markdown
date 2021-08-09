@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+        <PaketPropsVersion>5.185.3</PaketPropsVersion>
+        <PaketPropsLoaded>true</PaketPropsLoaded>
+    </PropertyGroup>
+
+    <ItemGroup Condition="($(DesignTimeBuild) == true) AND (($(TargetFrameworkIdentifier) == '.NETCoreApp' And $(TargetFrameworkVersion) == 'v5.0') Or ($(TargetFrameworkIdentifier) == '.NETStandard' And $(TargetFrameworkVersion) == 'v2.1'))">
+        <PackageReference Include="FSharp.Core">
+            <Version>5.0.2</Version>
+        </PackageReference>
+    </ItemGroup>
+</Project>

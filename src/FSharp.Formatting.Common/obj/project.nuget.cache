@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "stY+E+a8vlruOJeVGjo+vt08TTeDc/K5weizwgTWseadekGGlRmEjOoVL3UE1vgcGZkC7OeUtRDVmvF68SX4vw==",
+  "success": true,
+  "projectFilePath": "/Users/david/projects/Fable.Markdown/src/FSharp.Formatting.Common/FSharp.Formatting.Common.fsproj",
+  "expectedPackageFiles": [
+    "/Users/david/.nuget/packages/fsharp.core/5.0.0/fsharp.core.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.fs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Fable.Browser.Css" Version="2.*" />
+    <PackageReference Include="Fable.Browser.Dom" Version="2.*" />
+    <PackageReference Include="Fable.Browser.Event" Version="1.*" />
+    <PackageReference Include="Fable.Core" Version="3.*" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FSharp.Formatting.Markdown\FSharp.Formatting.Markdown.fsproj" />
+  </ItemGroup>
+</Project>
