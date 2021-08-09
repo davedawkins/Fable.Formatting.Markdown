@@ -1,6 +1,6 @@
 # Fable.Formatting.Markdown
 
-A port of `FSharp.Formatting.Markdown` for Fable. This will allow you to use format markdown into HTML inside your Fable application
+A port of `Fable.Formatting.Markdown` for Fable. This will allow you to use format markdown into HTML inside your Fable application
 
 Example code:
 
@@ -35,10 +35,21 @@ This is *italic*, and this is **bold**, and this is a `symbol`.
 """
 
 let markdown md =
-    let doc = FSharp.Formatting.Markdown.Markdown.Parse(md)
-    FSharp.Formatting.Markdown.Markdown.ToHtml(doc)
+    let doc = Fable.Formatting.Markdown.Markdown.Parse(md)
+    Fable.Formatting.Markdown.Markdown.ToHtml(doc)
 
 let appE = Browser.Dom.window.document.querySelector("#app")
 
 appE.innerHTML <- markdown markdownSrc
 ```
+
+## Details of Port to Fable
+
+- Based on `FSharp.Formatting` `v11.4.2`. Only the `Markdown` module has been ported across.
+
+- Regex match groups don't have an Index property. The workaround I used is to specify captures for all of the expression and then sum the size of each preceding capture to get the start of the original capture we wanted.
+
+- `Array.FindAll` - replaced with `Array.filter`
+
+- `TextWriter/StringWriter` replaced with `FableTextWriter`, which performs string concatenation
+

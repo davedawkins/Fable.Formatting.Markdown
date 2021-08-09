@@ -29,8 +29,8 @@ This is *italic*, and this is **bold**, and this is a `symbol`.
 """
 
 let markdown md =
-    let doc = FSharp.Formatting.Markdown.Markdown.Parse(md)
-    FSharp.Formatting.Markdown.Markdown.ToHtml(doc)
+    let doc = Fable.Formatting.Markdown.Markdown.Parse(md)
+    Fable.Formatting.Markdown.Markdown.ToHtml(doc)
 
 let appE = Browser.Dom.window.document.querySelector("#app")
 

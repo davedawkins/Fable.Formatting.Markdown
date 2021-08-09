@@ -3,11 +3,11 @@
 // (c) Tomas Petricek, 2012, Available under Apache 2.0 license.
 // --------------------------------------------------------------------------------------
 
-module internal FSharp.Patterns
+module internal Fable.Formatting.Patterns
 
 open System
-open FSharp.Collections
-open FSharp.Formatting.Markdown
+open Fable.Formatting.Collections
+open Fable.Formatting.Markdown
 
 module Log =
     let warn (s:string) = System.Console.WriteLine(s)

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.fs" />
@@ -13,6 +13,6 @@
     <PackageReference Include="Fable.Core" Version="3.*" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FSharp.Formatting.Markdown\FSharp.Formatting.Markdown.fsproj" />
+    <ProjectReference Include="..\Fable.Formatting.Markdown\Fable.Formatting.Markdown.fsproj" />
   </ItemGroup>
 </Project>

@@ -1,6 +1,9 @@
 node_modules
 package-lock.json
-src/**/obj
-src/**/bin
-src/**/*.fs.js
+[oO]bj
+[bB]in
+*.fs.js
 public/bundle.js
+
+.fake
+.ionide
