@@ -4,7 +4,7 @@ A port of `Fable.Formatting.Markdown` for Fable. This will allow you to use form
 
 ## Fable Example
 
-```
+```fsharp
 module App
 
 let markdownSrc = """
