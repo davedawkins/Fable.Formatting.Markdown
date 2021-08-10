@@ -2,7 +2,7 @@
 
 A port of `Fable.Formatting.Markdown` for Fable. This will allow you to use format markdown into HTML inside your Fable application
 
-Example code:
+## Fable Example
 
 ```
 module App
@@ -76,6 +76,9 @@ ReactDOM.render(
     document.getElementById "feliz-app"
 )
 ```
+
+Result:
+<img width="282" alt="image" src="https://user-images.githubusercontent.com/285421/128925663-b337781b-c973-4f16-a352-cba92d9f69ed.png">
 
 ## Details of Port to Fable
 
