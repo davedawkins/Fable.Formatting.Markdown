@@ -1,4 +1,4 @@
-# Fable.Formatting.Markdown
+# Fable.Formatting.Markdown [![Nuget](https://img.shields.io/nuget/v/Fable.Formatting.Markdown.svg?maxAge=0&colorB=brightgreen)](https://www.nuget.org/packages/Fable.Formatting.Markdown)
 
 A port of `Fable.Formatting.Markdown` for Fable. This will allow you to use format markdown into HTML inside your Fable application
 
