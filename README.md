@@ -34,14 +34,11 @@ This is *italic*, and this is **bold**, and this is a `symbol`.
 
 """
 
-let markdown md =
-    let doc = Fable.Formatting.Markdown.Markdown.Parse(md)
-    Fable.Formatting.Markdown.Markdown.ToHtml(doc)
-
 let appE = Browser.Dom.window.document.querySelector("#app")
 
-appE.innerHTML <- markdown markdownSrc
+appE.innerHTML <- Fable.Formatting.Markdown.Markdown.ToHtml(markdownSrc)
 ```
+
 ## Feliz Example
 
 ```fsharp
@@ -49,15 +46,12 @@ module Main
 
 open Feliz
 open Browser.Dom
-
-let mdToHtml (md : string) =
-    let doc = Fable.Formatting.Markdown.Markdown.Parse(md)
-    Fable.Formatting.Markdown.Markdown.ToHtml(doc)
+open Fable.Formatting.Markdown
 
 [<ReactComponent>]
 let MarkdownDiv (x:string) =
     Html.div [
-        prop.dangerouslySetInnerHTML (mdToHtml x)
+        prop.dangerouslySetInnerHTML (Markdown.ToHtml x)
     ]
 
 [<ReactComponent>]
