@@ -3,6 +3,7 @@
   "scripts": {
     "postinstall": "dotnet tool restore",
     "start": "dotnet fable watch src/App --run webpack-dev-server",
+    "publish:package": "dotnet fsi build.fsx publish",
     "build": "dotnet fable src/App --run webpack --mode production"
   },
   "devDependencies": {
@@ -10,5 +11,8 @@
     "webpack-cli": "^3.3.0",
     "webpack-dev-server": "^3.11.2"
   },
-  "version": "1.0.0"
+  "version": "1.0.0",
+  "dependencies": {
+    "fable-publish-utils": "^2.2.0"
+  }
 }

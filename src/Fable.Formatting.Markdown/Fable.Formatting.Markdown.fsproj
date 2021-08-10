@@ -1,27 +1,27 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Description>FSharp.Formatting.Markdown for Fable</Description>
+    <PackageProjectUrl>https://github.com/davedawkins/Fable.Formatting.Markdown</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/davedawkins/Fable.Formatting.Markdown</RepositoryUrl>
+    <PackageLicenseUrl>https://github.com/davedawkins/Fable.Formatting.Markdown/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageIconUrl></PackageIconUrl>
+    <PackageTags>fsharp;fable;markdown</PackageTags>
+    <Authors>David Dawkins</Authors>
+    <Version>1.0.0</Version>
+    <PackageVersion>1.0.0</PackageVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="..\Common\AssemblyInfo.fs">
-      <Link>Common\AssemblyInfo.fs</Link>
-    </Compile>
-    <Compile Include="..\Common\Collections.fs">
-      <Link>Common\Collections.fs</Link>
-    </Compile>
-    <Compile Include="..\Common\StringParsing.fs">
-      <Link>Common\StringParsing.fs</Link>
-    </Compile>
+    <Compile Include="Range.fs"/>
+    <Compile Include="Collections.fs"/>
+    <Compile Include="StringParsing.fs"/>
     <Compile Include="MarkdownModel.fs" />
     <Compile Include="MarkdownParser.fs" />
     <Compile Include="MarkdownUtils.fs" />
     <Compile Include="HtmlFormatting.fs" />
     <Compile Include="MarkdownFormatting.fs" />
     <Compile Include="Markdown.fs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Fable.Formatting.Common\Fable.Formatting.Common.fsproj" />
   </ItemGroup>
   <!-- Add source files to "fable" folder in Nuget package -->
   <ItemGroup>

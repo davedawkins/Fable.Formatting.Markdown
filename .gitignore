@@ -7,3 +7,5 @@ public/bundle.js
 
 .fake
 .ionide
+.DS_Store
+temp

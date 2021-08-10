@@ -4,7 +4,15 @@
   "tools": {
     "fable": {
       "version": "3.2.9",
-      "commands": ["fable"]
+      "commands": [
+        "fable"
+      ]
+    },
+    "fake-cli": {
+      "version": "5.20.4",
+      "commands": [
+        "fake"
+      ]
     }
   }
 }
