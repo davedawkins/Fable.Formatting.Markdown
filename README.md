@@ -42,6 +42,40 @@ let appE = Browser.Dom.window.document.querySelector("#app")
 
 appE.innerHTML <- markdown markdownSrc
 ```
+## Feliz Example
+
+```fsharp
+module Main
+
+open Feliz
+open Browser.Dom
+
+let mdToHtml (md : string) =
+    let doc = Fable.Formatting.Markdown.Markdown.Parse(md)
+    Fable.Formatting.Markdown.Markdown.ToHtml(doc)
+
+[<ReactComponent>]
+let MarkdownDiv (x:string) =
+    Html.div [
+        prop.dangerouslySetInnerHTML (mdToHtml x)
+    ]
+
+[<ReactComponent>]
+let app (md : string) =
+    let (src, setSrc) = React.useState(md)
+    Html.div [
+        MarkdownDiv src
+        Html.textarea [
+            prop.value src
+            prop.onChange (fun s -> setSrc(s))
+        ]
+    ]
+
+ReactDOM.render(
+    app "**Hello World** from *Markdown*",
+    document.getElementById "feliz-app"
+)
+```
 
 ## Details of Port to Fable
 
