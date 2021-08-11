@@ -2,7 +2,7 @@
 
 A port of `Fable.Formatting.Markdown` for Fable. This will allow you to use format markdown into HTML inside your Fable application.
 
-The benefit of using this package over (say) [markedjs](https://github.com/markedjs/marked) is that we have the same formatting behaviour and syntax as `FSharp.Formatting`. 
+The benefit of using this package over (say) [markedjs](https://github.com/markedjs/marked) is that we have the same formatting behaviour and syntax as `FSharp.Formatting`, and of course a rich FSharp-first API for parsing markdown text into an intermediate document.
 
 For documentation, refer to [Markdown Parser](https://fsprojects.github.io/FSharp.Formatting/markdown.html). Note that in general `FSharp.Formatting` in those documents is `Fable.Formatting` in this package.
 
