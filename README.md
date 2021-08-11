@@ -2,6 +2,8 @@
 
 A port of `Fable.Formatting.Markdown` for Fable. This will allow you to use format markdown into HTML inside your Fable application
 
+For documentation, refer to [Markdown Parser](https://fsprojects.github.io/FSharp.Formatting/markdown.html). Note that in general `FSharp.Formatting` in those documents is `Fable.Formatting` in this package.
+
 ## Fable Example
 
 ```fsharp
