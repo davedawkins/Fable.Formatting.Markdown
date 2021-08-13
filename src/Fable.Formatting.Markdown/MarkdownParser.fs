@@ -405,7 +405,7 @@ let (|FencedCodeBlock|_|) lines =
       // langString is the part after ``` and ignoredString is the rest until the line ends.
       let langString, ignoredString =
         if String.IsNullOrWhiteSpace header then "", "" else
-        let splits = header.Split((null : char array), StringSplitOptions.RemoveEmptyEntries)
+        let splits = header.Split(([|' ' |] : char array), StringSplitOptions.RemoveEmptyEntries)
         match splits |> Seq.tryFind (fun _ -> true) with
         | None -> "", ""
         | Some langString ->
